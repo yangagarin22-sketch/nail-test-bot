@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: nail-test-bot
+    env: python
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: python test_unsplash.py
+    envVars:
+      - key: UNSPLASH_ACCESS_KEY
+        value: ваш_ключ_сюда
